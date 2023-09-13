@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.h100{
+  height: calc(100vh - 181px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.search-panel{
+  background: url('https://images.freeimages.com/images/large-previews/322/open-book-1546443.jpg'), rgba(0, 0, 0, .4);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+
+  height: auto;
+}
+
+.books-header{
+  background-color: transparent;
+  height: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 20px 0;
+
+}
+.books-header div{
+  font-size: 16px;
+}
+
+
+
+.search-select{
+  min-width: 100px;
+}
+
+.search-title{
+  font-size: 28px;
+  color: white!important;
+  font-weight: 600;
+}
+
+[title="Categories"], [title="Sorting by"] {
+  color: white !important;
+}
+
+.book-list{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, 230px);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.book-list-item{
+  background-color: rgba(0, 0, 0, .05);
 }
 
-.App-link {
-  color: #61dafb;
+.book-category{
+  display: inline-block;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, .45);
+  text-decoration: underline;
+}
+.book-spinner{
+  margin: 30px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.book-list-item img{
+  height: 220px;
+}
+.book-title-meta{
+  font-size: 22px;
+}
+
+.ant-card-cover{
+  padding: 30px 30px 0 30px;
+}
+.ant-card-body{
+  padding-top: 10px!important;
+}
+.ant-card-meta-title{
+  font-size: 18px!important;
+  font-weight: bold!important;
+}
+
+
+
+.single-book-image-container{
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.single-book-description{
+  height: 100%;
+  padding: 30px 0;
+  border: 0;
+}
+.single-book-image{
+  box-shadow: 7px 7px 14px rgba(0, 0, 0, .2);
+}
+.single-book-description-card{
+  margin-top: 30px;
+  font-weight: 500;
+}
+.single-book-authors{
+  text-decoration: underline;
+}
+.single-book-category{
+  display: inline-block;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, .7);
 }
